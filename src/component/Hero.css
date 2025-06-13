@@ -1,0 +1,79 @@
+.hero-container {
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hero-container .hero-left-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(149, 231, 237);
+}
+
+.hero-left-subpart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    /* text-align: center; */
+}
+
+.hero-left-data {
+    margin: 9rem auto;
+
+}
+
+.hero-text {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.hero-title {
+    font-size: 50px;
+    color: #3faab6;
+}
+
+.hero-texts {
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.hero-container .hero-right-container {
+    width: 50%;
+    height: 100%;
+    background-image: url('/modal.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width : 600px) {
+    .hero-container {
+        flex-direction: column;
+        height: 550px;
+    }
+
+    .hero-container .hero-left-container {
+        width: 100%;
+        height: 50%;
+    }
+
+    .hero-text {
+        font-size: 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-container .hero-right-container {
+        width: 100%;
+        height: 50%;
+    }
+
+}

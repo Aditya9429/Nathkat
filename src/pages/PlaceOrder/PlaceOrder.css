@@ -1,0 +1,112 @@
+.placeorder-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.placeorder-left {
+    width: 60%;
+    min-width: 300px;
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.placeorder-title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input,
+.inp,
+.nip {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.input1,
+.input2,
+.input-3 {
+    width: 48%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: border-color 0.2s;
+}
+
+.input1:focus,
+.input2:focus,
+.input-3:focus,
+.input4:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Phone number full width */
+.input4 {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fafafa;
+}
+
+/* Right section */
+.placeorder-right {
+    width: 35%;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 2rem;
+    /* background-color: #fff; */
+    border-radius: 16px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Inside cart */
+.placeorder-cart {
+    width: 100%;
+}
+
+.ju {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+
+}
+
+.i {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .placeorder-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .placeorder-left,
+    .placeorder-right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .input1,
+    .input2,
+    .input-3 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,62 @@
+.letter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    padding: 2rem;
+    gap: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.letter-container .letter-title {
+    font-size: 30px;
+    font-style: inherit;
+    font-weight: 600;
+}
+
+.letter-container .letter-text {
+    color: rgb(160, 146, 146);
+}
+
+.letter-container .letter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.letter-container .letter-form .letter-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 18px;
+    border-radius: 2px;
+    border: 1px solid rgb(131, 117, 117);
+    font-size: 16px;
+}
+
+.letter-container .letter-form .letter-button {
+    background-color: black;
+    color: white;
+    padding: 19px;
+    font-size: 15px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+}
+
+.letter-container .letter-form .letter-input:focus {
+    border: 2px solid rgb(154, 154, 207);
+    outline: none;
+}
+
+@media (max-width : 600px) {
+    .letter-title{
+        /* background-color: aqua; */
+        text-align: center;
+    }
+    .letter-input {
+        max-width: 10px;
+    }
+}

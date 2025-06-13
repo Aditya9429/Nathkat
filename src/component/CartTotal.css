@@ -1,0 +1,24 @@
+.carttotal-container{
+    width: 100%;
+    max-width: 700px;
+}
+.carttotalMain {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cartSubtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.cartDelivery{
+    display: flex;
+    justify-content: space-between;
+}
+hr{
+}
+.cartotal{
+    display: flex;
+    justify-content: space-between;
+}

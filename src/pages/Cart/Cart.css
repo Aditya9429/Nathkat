@@ -1,0 +1,141 @@
+
+.cart-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.cart-title h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.cart-item-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+  flex-wrap: wrap;
+}
+
+.cart-item-container:hover {
+  transform: scale(1.01);
+}
+
+
+.cart-item-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+
+.cart-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+  margin-right: auto;
+}
+
+.cart-item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 4px 0;
+}
+
+.cart-item-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.input-box {
+  width: 60px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  margin-right: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-box:focus {
+  border-color: #333;
+}
+
+/* Delete icon */
+.delete {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.delete:hover {
+  transform: scale(1.2);
+}
+.cart-tm{
+    display: flex;
+    justify-content: flex-end;
+    margin: 100px 100px;
+}
+.checkout{
+    background-color: black;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: white;
+    margin: 2rem 0rem 0rem 4rem;
+}
+.checkout:hover{
+    background-color: #2a2929;
+}
+@media (max-width : 600px){
+    .cart-item-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-item{
+        margin-right :12px;
+    }
+    .cart-tm{
+         justify-content: flex-end;
+    margin: 10px 30px 20px 0;
+    width: 100%;
+    display: flex;
+      
+    }
+    .cart-tm-main{
+        margin-right: 12px;
+    }
+    .checkout{
+        margin-top: 20px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    }
+}

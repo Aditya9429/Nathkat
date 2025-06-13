@@ -1,0 +1,132 @@
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+img {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about-data {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    text-align: justify;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.about-down-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    width: 350px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgb(245, 231, 231);
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    cursor: pointer;
+}
+
+.about-box:hover {
+    transform: scale(1.1);
+}
+
+.about-down {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.b {
+    text-align: center;
+}
+
+.about-text {
+    margin-top: 1rem;
+    color: rgb(55, 51, 51);
+}
+
+/* ------------------- RESPONSIVE STYLES ------------------- */
+@media (max-width: 768px) {
+    img {
+        width: 80%;
+        height: auto;
+    }
+
+    .about-main {
+        flex-direction: column;
+        gap: 2rem;
+        margin-left: 0;
+    }
+
+    .about-data {
+        max-width: 90%;
+    }
+
+    .about-box {
+        width: 90%;
+        height: auto;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        margin: 60px auto;
+        padding: 0 10px;
+    }
+
+    .about-title {
+        font-size: 1.3rem;
+    }
+
+    .about-box {
+        padding: 10px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
