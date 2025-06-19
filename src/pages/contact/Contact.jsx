@@ -5,7 +5,7 @@ export default function Contact() {
     <div className='contact'>
       <h1>Contact Us-</h1>
       <div className='contact-main'>
-        <img src='/contact.jpg'  className='contact-img'/>
+        <img src='/contact.png'  className='contact-img'/>
         <div  className='contact-data'>
           <p className='text'>Our Store</p>
           <p>518 Pratap Vihar <br /> kirari 350 ,Delhi India</p>
