@@ -16,7 +16,9 @@ html,
 body {
   width: 100%;
   height: 100%;
+  
 }
+
 
 img {
   width: 500px;
@@ -26,68 +28,78 @@ img {
 a.active hr {
   display: block;
 }
-
-.light {
-  --bg-color: #ffffff;
-  --text-color: #111111;
+.light-mode {
+  background-color: #f7f7f7;
+  color: #333;
 }
 
-.dark {
-  --bg-color: #111111;
-  --text-color: #ffffff;
+.light-mode input,
+.light-mode textarea,
+.light-mode select ,
+.light-mode .product-card,
+.light-mode .collection-sub
+{
+  background-color: #ffffff;
+  color: #333;
+  border: 1.5px solid #ccc;
+  padding: 12px 14px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.3s ease;
 }
 
+.light-mode input:focus,
+.light-mode textarea:focus,
+.light-mode select:focus {
+  border-color: #6c63ff;
+}
+
+.dark-mode {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select 
+
+{
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1.5px solid #444;
+  padding: 12px 14px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+.dark-mode .product-card,
+.dark-mode .collection-sub
+{
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+  border-color: #00c9a7;
+}
+.dark-mode p,
+.dark-mode label
+{
+  color: white;
+}
 body,
-
-.home-container,
-.policy-container,.b {
-
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
+input,
+textarea,
+select,
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-container {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-}
-.contact .contact-main .contact-data .text{
-    background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
 
-.policy-wrapper .policy-icon {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-.policy-wrapper .policy-title {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-.policy-wrapper .policy-data {
-  color: rgb(150, 145, 146)
-}
-
-.collection-container .collection-main .collection-sub {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-
-}
-
-.collection-container .collection-right .list-of-products .products-card {
-  border: 1px solid white;
-}
-.product-container .product-container-main .product-container-left .left-right{
-  border : 1px solid white
-}
 ::-webkit-scrollbar{
   display: none;
 }

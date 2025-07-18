@@ -7,6 +7,8 @@ export default function Collection() {
   const { product, filterItem, setFilterItem, search, showSearch } = useContext(ShopContext);
   const [currentSelectcategory, setCurrentCategory] = useState('');
   const [sortOption, setSortOption] = useState('relevant');
+  const [visibleCount, setVisibleCount] = useState(10);
+  const increment = 10;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -53,6 +55,10 @@ export default function Collection() {
     product && product.length > 0
       ? [...new Set(product.map((productItem) => productItem.category))]
       : [];
+
+  function handleViewMore() {
+    setVisibleCount((prev => prev + increment))
+  }
   return (
     <div className='collection-container'>
       <div className='collection-main'>
@@ -99,7 +105,7 @@ export default function Collection() {
             <ul className="list-of-products">
               {filterItem &&
                 filterItem.length > 0 &&
-                filterItem.map((productItem) => (
+                filterItem.slice(0, visibleCount).map((productItem) => (
                   <li key={productItem.id} className="products-card" onClick={() => navigate(`/product/${productItem.id}`)}
                     style={{ cursor: 'pointer' }}>
                     <img src={productItem.thumbnail} className='product-item' />
@@ -111,8 +117,19 @@ export default function Collection() {
             </ul>
 
           }
-        </div>
 
+        </div>
+        <div className='viewmorebtn'>
+        {visibleCount < filterItem.length && (
+          <button
+            onClick={handleViewMore}
+            disabled={visibleCount >= filterItem.length}
+            className="viewmore"
+          >
+            View More
+          </button>
+        )}
+        </div>
       </div>
 
     </div>

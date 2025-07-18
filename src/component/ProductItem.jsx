@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 
 
-export default function ProductItem({ key, item }) {
-    const {product} = useContext(ShopContext)
+export default function ProductItem({ key, item}) {
+    const {product } = useContext(ShopContext)
      const navigate = useNavigate();
     
+    
     return (
+        <div>
         <div className='product-card' >
             <div className="product-image" key={key}  onClick={() => navigate(`/product/${item.id}`)}>
                 <img className="item-img" src={item.thumbnail} alt={item.category} />
@@ -20,6 +22,9 @@ export default function ProductItem({ key, item }) {
                     <p className='item-rating'>{item.rating}</p>
                 </div>
             </div>
+          
         </div>
+         
+            </div>
     )
 }

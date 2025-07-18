@@ -108,7 +108,9 @@
     font-size: 0.7rem;
     padding: 2px 6px;
 }
-
+.theme-toggle {
+    padding-top: 10px;
+}
 
 .admin-wrapper {
     position: relative;

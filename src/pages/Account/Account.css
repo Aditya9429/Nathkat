@@ -1,0 +1,148 @@
+.acc-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px;
+    position: relative;
+}
+
+.acc-img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+img {
+    width: 20%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.heart {
+    color: red;
+}
+
+.settings {
+    color: rgb(43, 31, 199)
+}
+
+.star {
+    color: purple;
+}
+
+.policy {
+    color: rgb(217, 82, 48);
+}
+
+.handshake {
+    color: rgb(214, 167, 36);
+
+}
+
+.uni {
+    color: blue;
+}
+
+.payment {
+    color: rgb(98, 58, 232);
+}
+
+.share {
+    color: rgb(222, 84, 107);
+}
+
+.shop {
+    color: rgb(222, 118, 20);
+}
+
+.acc-sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px
+}
+
+.acc-payment p span,
+.acc-activity p span,
+.acc-others p span {
+    margin-right: 8px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.acc-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4px;
+
+}
+
+.acc-help {
+    border: 0.5px solid rgb(152, 144, 144);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+
+
+p {
+    margin-top: 9px;
+    margin-bottom: 9px;
+    color: rgb(57, 45, 45);
+    font-weight: 500;
+}
+
+.acc-payment,
+.acc-activity,
+.acc-others {
+    width: 100%;
+
+}
+
+hr {
+    width: 80%;
+}
+
+button {
+    padding: 8px;
+    background-color: rgb(56, 45, 56);
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.rating {
+    width: 510px;
+    position: absolute;
+    top: 155%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+   
+}
+.rating-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rating-star{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

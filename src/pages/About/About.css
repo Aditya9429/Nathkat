@@ -12,11 +12,11 @@
     font-size: 2rem;
 }
 
-img {
+.about-main img {
     width: 40%;
-    height: 400px;
+    height: 40%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .about-main {
@@ -57,9 +57,9 @@ p {
     border-radius: 12px;
     padding: 14px;
     margin-top: 10px;
-    box-shadow: 0 0 10px rgb(245, 231, 231);
+    /* box-shadow: 0 0 10px rgb(245, 231, 231); */
     transition: transform 0.3s ease-in-out;
-    background-color: white;
+    /* background-color: white; */
     cursor: pointer;
 }
 

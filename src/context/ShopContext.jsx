@@ -5,12 +5,22 @@ export const ShopContext = createContext();
 function GlobalState(props) {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
   const [filterItem, setFilterItem] = useState([]);
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(true);
   const [cartItem, setCartItem] = useState({});
+  const [visibleCount,setVisibleCount]  = useState(10);
+    
+  useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
+    const toggleTheme = () => {
+        setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+    };
+  
+  const increment = 10;
   function addToCart(itemId) {
     const carData = { ...cartItem };
     if (carData[itemId]) {
@@ -46,10 +56,13 @@ function GlobalState(props) {
   }
   return totalAmount;
 }
+function viewmore(){
+   setVisibleCount((prev => prev + increment))
+}
 
-  function toggleTheme() {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  }
+  // function toggleTheme() {
+  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  // }
 
   async function fetchProduct() {
     try {
@@ -76,10 +89,10 @@ function GlobalState(props) {
     fetchProduct();
   }, []);
 
-  useEffect(() => {
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(theme);
-  }, [theme]);
+  // useEffect(() => {
+  //   document.body.classList.remove("light", "dark");
+  //   document.body.classList.add(theme);
+  // }, [theme]);
 
   useEffect(() => {
     console.log("Cart updated:", cartItem);
@@ -94,8 +107,10 @@ function GlobalState(props) {
     product,
     setProduct,
     loading,
-    theme,
-    toggleTheme,
+     theme,
+     setTheme,
+     toggleTheme ,
+   
     filterItem,
     setFilterItem,
     search,
@@ -107,7 +122,10 @@ function GlobalState(props) {
     getCartCount,
     removeCart,
     updateQuantity,
-    getCartTotal
+    getCartTotal,
+    viewmore,
+    visibleCount,
+    setVisibleCount
   };
 
   return <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>;

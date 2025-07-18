@@ -8,7 +8,7 @@ import RelatedProducts from '../../component/RelatedProducts';
 export default function Product() {
   const { productId } = useParams();
   console.log("productID", productId);
-  const { product, addToCart ,removeCart } = useContext(ShopContext);
+  const { product, addToCart, removeCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
   console.log(productId);
@@ -34,7 +34,6 @@ export default function Product() {
             {
               productData.images.map((item, index) => (
                 <img onClick={() => setImage(item)} src={item} key={index} className='product-img' />
-
               ))
 
             }
@@ -59,7 +58,7 @@ export default function Product() {
           <p className='product-brand'>Brand : {productData.brand}</p>
           <div className='product-cart'>
             <button onClick={() => addToCart(productData.id)} className='product-button'>Add to Cart</button>
-            <button onClick={() => removeCart(productData.id)}  className='product-button' >Remove from cart</button>
+            <button onClick={() => removeCart(productData.id)} className='product-button' >Remove from cart</button>
             <hr />
           </div>
           <div className='product-policy'>
