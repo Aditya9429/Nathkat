@@ -1,8 +1,10 @@
 .hero-container {
     width: 80%;
     height: 500px;
-    margin: 50px auto;
+    /* margin: 50px auto; */
+    margin: 0px auto;
     display: flex;
+    padding-top: 5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 

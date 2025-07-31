@@ -1,44 +1,84 @@
-.latest-container{
+.latest-container {
     display: flex;
     flex-direction: column;
-    
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
-.latest-container-data{
+
+/* Section title */
+.latest-container-data {
     text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.product{
+
+/* Grid layout for products */
+.product {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
-    gap: 0.5rem;
-    padding: 0;
-    margin-left : 13px;
+    gap: 1rem;
+    padding: 0 10px;
 }
-.viewmorebtn{
+
+/* View More Button container */
+.viewmorebtn {
     display: flex;
-    align-items: center;
-     margin: 30px auto;
+    justify-content: center;
+    margin: 30px auto;
 }
-.viewmore{
 
-
- padding: 1rem;
- font-size: 15px;
- font-weight: 700;
- background-color: rgb(69, 69, 237);
- color: white;
- border: none;
- outline: none;
- border-radius: 12px;
+/* View More Button */
+.viewmore {
+    padding: 0.8rem 1.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(69, 69, 237);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-@media (max-width : 600px)
-{
+
+.viewmore:hover {
+    background-color: rgb(41, 41, 189);
+    transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .latest-container-data {
+        font-size: 20px;
+    }
+
+    .viewmore {
+        font-size: 15px;
+    }
+     .product{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .latest-container {
+        padding: 10px;
+    }
+
+    .latest-container-data {
+        font-size: 18px;
+    }
     .product{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .viewmore {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 0.7rem;
     }
 }

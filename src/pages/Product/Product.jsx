@@ -59,7 +59,7 @@ export default function Product() {
           <div className='product-cart'>
             <button onClick={() => addToCart(productData.id)} className='product-button'>Add to Cart</button>
             <button onClick={() => removeCart(productData.id)} className='product-button' >Remove from cart</button>
-            <hr />
+            {/* <hr /> */}
           </div>
           <div className='product-policy'>
             <p>100% Orginal Product</p>
@@ -68,7 +68,7 @@ export default function Product() {
 
           </div>
         </div>
-        <div className='review-container'>
+        {/* <div className='review-container'>
           <div className='review-container-box'>
             <p className='review-text'>Description</p>
             <p className='review-text'>Review(122)</p>
@@ -78,7 +78,7 @@ export default function Product() {
             <p className='review'>"I used it consistently for 3 weeks, and my skin felt softer and looked visibly plumper. Best results when used at night after cleansing.".</p>
 
           </div>
-        </div>
+        </div> */}
         <RelatedProducts category={productData.category} />
       </div>
     </div>

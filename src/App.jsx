@@ -20,8 +20,9 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <SearchBar />
-     <div className={`${theme === "dark" ? "dark-mode" : "light-mode"} body-container`}>
+      <div className={`${theme === "dark" ? "dark-mode" : "light-mode"} body-container`}>
+        <SearchBar />
+
         <Routes>
 
           <Route path='/' element={<Home />} />

@@ -16,7 +16,8 @@
 
 img {
     width: 20%;
-    border-radius: 50%;
+    height: 10%;
+    border-radius:100%;
     object-fit: cover;
 }
 
@@ -62,7 +63,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 5px
+    gap: 15px
 }
 
 .acc-payment p span,
@@ -72,7 +73,9 @@ img {
     display: inline-flex;
     vertical-align: middle;
 }
-
+.acc-payment,.acc-activity .acc-others{
+margin-top: 25px;
+}
 .acc-center {
     display: flex;
     align-items: center;
@@ -145,4 +148,9 @@ button {
     justify-content: space-between;
     align-items: center;
     
+}
+@media screen and (max-width : 600px){
+    .acc-help{
+        font-size: 12px;
+    }
 }

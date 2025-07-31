@@ -81,7 +81,10 @@
 .footer-copyright {
   text-align: center;
   font-size: 13px;
-  color: #888;
+  color: #c0b169;
+}
+.footer-copyright p{
+color: #706f6e;
 }
 @media (max-width: 600px){
     .footer{
