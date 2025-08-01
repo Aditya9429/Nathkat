@@ -22,11 +22,7 @@
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-.product-image{
-    /* margin-right: -30px; */
-/* background-color: #3b2d2d; */
 
-}
 .product-card:hover .item-img {
     transform: scale(1.05);
 }
