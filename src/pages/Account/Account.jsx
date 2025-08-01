@@ -76,7 +76,7 @@ export default function Account() {
         <p><span><MdPolicy className='policy' /></span> Legal and Policies</p>
       </div>
       
-      <div className='rating'>
+      {/* <div className='rating'>
          <div className='rating-content'>
           <h2>Would you like to rate us on Play Store?</h2>
            <p>Your feedback helps us make your experience better</p>
@@ -93,7 +93,7 @@ export default function Account() {
             <p>Best</p>
            </div>
          </div>
-      </div>
+      </div> */}
     </div>
   );
 }

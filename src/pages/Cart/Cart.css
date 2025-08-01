@@ -1,9 +1,8 @@
-
 .cart-container {
   max-width: 1200px;
-  margin: 40px auto;
+  margin:  auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
 }
@@ -26,12 +25,13 @@
 .cart-item-container {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 15px 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease;
   flex-wrap: wrap;
+  border: 1px solid white;
 }
 
 .cart-item-container:hover {
@@ -96,46 +96,54 @@
 .delete:hover {
   transform: scale(1.2);
 }
-.cart-tm{
+
+.cart-tm {
+  display: flex;
+  justify-content: flex-end;
+  margin: 100px 100px;
+}
+
+.checkout {
+  background-color: black;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  margin: 2rem 0rem 0rem 4rem;
+}
+
+.checkout:hover {
+  background-color: #2a2929;
+}
+
+@media (max-width : 600px) {
+  .cart-item-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-item {
+    margin-right: 12px;
+  }
+
+  .cart-tm {
     justify-content: flex-end;
-    margin: 100px 100px;
-}
-.checkout{
-    background-color: black;
-    padding: 0.5rem;
-    outline: none;
-    border: none;
-    border: 1px solid black;
-    border-radius: 4px;
-    color: white;
-    margin: 2rem 0rem 0rem 4rem;
-}
-.checkout:hover{
-    background-color: #2a2929;
-}
-@media (max-width : 600px){
-    .cart-item-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .cart-item{
-        margin-right :12px;
-    }
-    .cart-tm{
-         justify-content: flex-end;
     margin: 10px 30px 20px 0;
     width: 100%;
     display: flex;
-      
-    }
-    .cart-tm-main{
-        margin-right: 12px;
-    }
-    .checkout{
-        margin-top: 20px;
+
+  }
+
+  .cart-tm-main {
+    margin-right: 12px;
+  }
+
+  .checkout {
+    margin-top: 20px;
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
-    }
+  }
 }

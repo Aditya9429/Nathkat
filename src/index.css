@@ -7,7 +7,7 @@
   box-sizing: border-box;
   /* animation: fadeIn 1s ease-in-out; */
   /* font-family: "Noto Sans", sans-serif; */
-  font-family: "Quicksand", sans-serif;
+  /* font-family: "Quicksand", sans-serif; */
 
 
 }
@@ -32,6 +32,7 @@ a.active hr {
   background-color: #f7f7f7;
   color: #333;
 }
+
 
 .light-mode input,
 .light-mode textarea,
@@ -59,7 +60,29 @@ a.active hr {
   background-color: #1f1f1f;
   color: #f0f0f0;
 }
-
+.dark-mode .cart-title h1{
+  color: white;
+}
+.dark-mode .placeorder-container{
+  background-color: black;
+}
+.dark-mode .placeorder-title h1{
+  color: white;
+}
+.dark-mode .product-button{
+  border: 1px solid white;
+}
+.dark-mode .login-popup-container  .login-popup-title{
+  color: white;
+}
+.dark-mode .login-popup-container .login-popup-inputs input{
+  background-color: rgb(203, 194, 194);
+}
+.dark-mode .related-title{
+  color: white;
+  
+}
+.dark-mode
 .dark-mode input,
 .dark-mode textarea,
 .dark-mode select 
@@ -74,7 +97,7 @@ a.active hr {
   font-size: 15px;
   transition: border 0.3s ease;
 }
-.dark-mode .product-card,
+
 .dark-mode .collection-sub
 {
   background-color: #2a2a2a;

@@ -1,13 +1,14 @@
 
  .product-card {
     width: 250px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease;
     margin: 0.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
+    border: 1px solid white;
 }
 
 .product-card:hover {

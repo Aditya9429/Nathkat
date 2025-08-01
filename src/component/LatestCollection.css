@@ -3,19 +3,19 @@
     flex-direction: column;
     padding: 20px;
     max-width: 1200px;
-    margin: auto;
+    margin: 70px auto;
 }
 
-/* Section title */
+
 .latest-container-data {
     text-align: center;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Grid layout for products */
+
 .product {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -24,14 +24,13 @@
     padding: 0 10px;
 }
 
-/* View More Button container */
+
 .viewmorebtn {
     display: flex;
     justify-content: center;
     margin: 30px auto;
 }
 
-/* View More Button */
 .viewmore {
     padding: 0.8rem 1.5rem;
     font-size: 16px;
@@ -49,7 +48,7 @@
     transform: scale(1.05);
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 768px) {
     .latest-container-data {
         font-size: 20px;
@@ -72,7 +71,7 @@
         font-size: 18px;
     }
     .product{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
     }
 
     .viewmore {

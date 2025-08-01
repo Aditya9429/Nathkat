@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import { TailSpin } from "react-loader-spinner";
 
 export const ShopContext = createContext();
 
@@ -99,7 +100,16 @@ function viewmore(){
   }, [cartItem]);
 
   if (loading) {
-    return <h1>Loading, please wait...</h1>;
+    return    <div style={{ display: "flex", justifyContent: "center" ,alignContent : "center" ,margin : "300px auto"}}>
+      <TailSpin
+        height="50"
+        width="50"
+        color="#4fa94d"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        visible={true}
+      />
+    </div>
   }
 
 

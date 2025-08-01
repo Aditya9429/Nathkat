@@ -5,6 +5,8 @@
     gap: 16px;
     padding: 20px;
     box-sizing: border-box;
+    margin: 0;
+    /* background-color: pink; */
 }
 
 .collection-main {
