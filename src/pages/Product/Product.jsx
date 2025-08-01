@@ -68,17 +68,7 @@ export default function Product() {
 
           </div>
         </div>
-        {/* <div className='review-container'>
-          <div className='review-container-box'>
-            <p className='review-text'>Description</p>
-            <p className='review-text'>Review(122)</p>
-          </div>
-          <div className='review-data'>
-            <p className='review'>I recently tried the Maybelline Fit Me Matte + Poreless Foundation, and I must say it lives up to the hype. The texture is lightweight and blends effortlessly into the skin, providing a natural matte finish. It’s perfect for oily to combination skin types, as it helps control shine without feeling heavy. What impressed me the most is its buildable coverage — you can keep it light for a daily look or add a bit more for special occasions. It lasted a good 6–7 hours on my skin without creasing or settling into fine lines.</p>
-            <p className='review'>"I used it consistently for 3 weeks, and my skin felt softer and looked visibly plumper. Best results when used at night after cleansing.".</p>
-
-          </div>
-        </div> */}
+        
         <RelatedProducts category={productData.category} />
       </div>
     </div>
