@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import { Menu, Search, ShoppingBag, User } from 'lucide-react';
@@ -9,8 +9,22 @@ import { CiSun } from "react-icons/ci";
 
 export default function Navbar() {
     const [visible, setVisible] = useState(false);
-    const { darkMode, theme ,toggleTheme, setShowSearch, getCartCount } = useContext(ShopContext);
+    const { darkMode, theme, toggleTheme, setShowSearch, getCartCount } = useContext(ShopContext);
     const navigate = useNavigate();
+    const sideBarRef = useRef();
+
+    useEffect(() => {
+        if (!visible) return;
+
+        function handleOutsideClick(e) {
+            if (sideBarRef.current && !sideBarRef.current.contains(e.target)) {
+                setVisible(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleOutsideClick);
+        return () => document.removeEventListener('mousedown', handleOutsideClick);
+    }, [visible]);
 
     return (
         <div className={`navbar-container ${darkMode ? 'navbar-dark' : ''}`}>
@@ -19,16 +33,15 @@ export default function Navbar() {
                 <Link to="/"><h1 className='title'>Natkhat</h1></Link>
 
                 <ul className='ul-container'>
-                    <NavLink to='/'><p className='home-title'>Home</p><hr /></NavLink>
-                    <NavLink to='/about'><p>About</p><hr /></NavLink>
-                    <NavLink to='/collection'><p>Collection</p><hr /></NavLink>
-                    <NavLink to='/contact'><p>Contact</p><hr /></NavLink>
+                    <NavLink to="/"           className={({ isActive }) => isActive ? "active" : ""}><p>Home</p><hr /></NavLink>
+                    <NavLink to="/about"      className={({ isActive }) => isActive ? "active" : ""}><p>About</p><hr /></NavLink>
+                    <NavLink to="/collection" className={({ isActive }) => isActive ? "active" : ""}><p>Collection</p><hr /></NavLink>
+                    <NavLink to="/contact"    className={({ isActive }) => isActive ? "active" : ""}><p>Contact</p><hr /></NavLink>
 
                     <div onClick={toggleTheme} className='theme-toggle'>
-                         {theme === "light" ? <LuMoonStar /> : <CiSun />}
+                        {theme === "light" ? <LuMoonStar /> : <CiSun />}
                     </div>
                 </ul>
-                
 
                 <div className='left-part'>
                     <Search className='search-icon' onClick={() => setShowSearch(true)} />
@@ -37,9 +50,9 @@ export default function Navbar() {
                         <User className='profile-icon' onClick={() => navigate('/login')} />
                         <div className='admin-container-list'>
                             <div className='dropdown-menu'>
-                                <p className='dropDown-item'>My Profile</p>
+                                <p className='dropdown-item'>My Profile</p>
                                 <p className='dropdown-item'>Orders</p>
-                                <p className='dropdownItem'>Logout</p>
+                                <p className='dropdown-item'>Logout</p>
                             </div>
                         </div>
                     </div>
@@ -49,17 +62,18 @@ export default function Navbar() {
                         <p className='number-cart'>{getCartCount()}</p>
                     </Link>
 
-                    <Menu onClick={() => setVisible(true)} />
+                    <Menu className='menu-icon' onClick={() => setVisible(true)} />
                 </div>
 
-                <div className={`sidebar-container ${visible ? 'active' : ''}`}>
+              
+                <div ref={sideBarRef} className={`sidebar-container ${visible ? 'active' : ''}`}>
                     <div className="sidebar-content-wrapper">
                         <div className='sidebar-back-button'>
                             <RxCross2 onClick={() => setVisible(false)} className='sidebar-back-icon' />
-                            <p className='sidebar-back-text' onClick={() => setVisible(false)}>Back</p>
+                            <p onClick={() => setVisible(false)} className='sidebar-back-text'>Back</p>
 
                             <div onClick={toggleTheme} className='theme-toggle'>
-                                {!darkMode ? <LuMoonStar /> : <CiSun className='sun' />}
+                                {theme === "light" ? <LuMoonStar /> : <CiSun className='sun' />}
                             </div>
                         </div>
 
