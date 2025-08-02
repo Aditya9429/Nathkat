@@ -26,11 +26,15 @@ export default function Navbar() {
         return () => document.removeEventListener('mousedown', handleOutsideClick);
     }, [visible]);
 
+
+    function handlClick(){
+        navigate('/');
+    }
     return (
         <div className={`navbar-container ${darkMode ? 'navbar-dark' : ''}`}>
             <div className='navlink-container'>
 
-                <Link to="/"><h1 className='title'>Natkhat</h1></Link>
+                <h1 className='title' onClick={handlClick}>Natkhat</h1>
 
                 <ul className='ul-container'>
                     <NavLink to="/"           className={({ isActive }) => isActive ? "active" : ""}><p>Home</p><hr /></NavLink>

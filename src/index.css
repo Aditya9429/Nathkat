@@ -1,5 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +10,7 @@
   box-sizing: border-box;
   /* animation: fadeIn 1s ease-in-out; */
   /* font-family: "Noto Sans", sans-serif; */
-  /* font-family: "Quicksand", sans-serif; */
+  font-family: "Quicksand", sans-serif;
 
 
 }
@@ -16,7 +19,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  
+
 }
 
 
@@ -28,6 +31,7 @@ img {
 a.active hr {
   display: block;
 }
+
 .light-mode {
   background-color: #f7f7f7;
   color: #333;
@@ -36,10 +40,9 @@ a.active hr {
 
 .light-mode input,
 .light-mode textarea,
-.light-mode select ,
+.light-mode select,
 .light-mode .product-card,
-.light-mode .collection-sub
-{
+.light-mode .collection-sub {
   background-color: #ffffff;
   color: #333;
   border: 1.5px solid #ccc;
@@ -60,35 +63,39 @@ a.active hr {
   background-color: #1f1f1f;
   color: #f0f0f0;
 }
-.dark-mode .cart-title h1{
+
+.dark-mode .cart-title h1 {
   color: white;
 }
-.dark-mode .placeorder-container{
+
+.dark-mode .placeorder-container {
   background-color: black;
 }
-.dark-mode .placeorder-title h1{
+
+.dark-mode .placeorder-title h1 {
   color: white;
 }
 
-.dark-mode .product-button{
+.dark-mode .product-button {
   border: 1px solid white;
 }
-.dark-mode .login-popup-container  .login-popup-title{
+
+.dark-mode .login-popup-container .login-popup-title {
   color: white;
 }
-.dark-mode .login-popup-container .login-popup-inputs input{
+
+.dark-mode .login-popup-container .login-popup-inputs input {
   background-color: rgb(203, 194, 194);
 }
-.dark-mode .related-title{
-  color: white;
-  
-}
-.dark-mode
-.dark-mode input,
-.dark-mode textarea,
-.dark-mode select 
 
-{
+.dark-mode .related-title {
+  color: white;
+
+}
+
+.dark-mode .dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
   background-color: #2a2a2a;
   color: #f0f0f0;
   border: 1.5px solid #444;
@@ -99,8 +106,7 @@ a.active hr {
   transition: border 0.3s ease;
 }
 
-.dark-mode .collection-sub
-{
+.dark-mode .collection-sub {
   background-color: #2a2a2a;
   color: #f0f0f0;
 }
@@ -110,11 +116,13 @@ a.active hr {
 .dark-mode select:focus {
   border-color: #00c9a7;
 }
+
 .dark-mode p,
-.dark-mode label
-{
+.dark-mode label {
   color: white;
 }
+
+
 body,
 input,
 textarea,
@@ -124,7 +132,8 @@ button {
 }
 
 
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
 
