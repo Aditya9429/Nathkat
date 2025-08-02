@@ -61,9 +61,7 @@ function viewmore(){
    setVisibleCount((prev => prev + increment))
 }
 
-  // function toggleTheme() {
-  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  // }
+
 
   async function fetchProduct() {
     try {
@@ -90,10 +88,7 @@ function viewmore(){
     fetchProduct();
   }, []);
 
-  // useEffect(() => {
-  //   document.body.classList.remove("light", "dark");
-  //   document.body.classList.add(theme);
-  // }, [theme]);
+  
 
   useEffect(() => {
     console.log("Cart updated:", cartItem);
