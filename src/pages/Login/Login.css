@@ -83,3 +83,9 @@ span{
     font-weight: 500;
     cursor: pointer;
 }
+.login:hover{
+   color: green;
+}
+.sign:hover{
+    color: blue;
+}

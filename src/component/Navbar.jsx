@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
-import { Menu, Search, ShoppingBag, User } from 'lucide-react';
+import { Menu, MoonIcon, Search, ShoppingBag, Sun, User } from 'lucide-react';
 import { ShopContext } from '../context/ShopContext';
 import { RxCross2 } from 'react-icons/rx';
 import { LuMoonStar } from "react-icons/lu";
@@ -43,7 +43,7 @@ export default function Navbar() {
                     <NavLink to="/contact"    className={({ isActive }) => isActive ? "active" : ""}><p>Contact</p><hr /></NavLink>
 
                     <div onClick={toggleTheme} className='theme-toggle'>
-                        {theme === "light" ? <LuMoonStar /> : <CiSun />}
+                        {theme === "light" ? <MoonIcon /> : <Sun />}
                     </div>
                 </ul>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                             <p onClick={() => setVisible(false)} className='sidebar-back-text'>Back</p>
 
                             <div onClick={toggleTheme} className='theme-toggle'>
-                                {theme === "light" ? <LuMoonStar /> : <CiSun className='sun' />}
+                                {theme === "light" ? <MoonIcon /> : <Sun className='sun' />}
                             </div>
                         </div>
 

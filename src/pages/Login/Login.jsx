@@ -21,8 +21,8 @@ export default function Login() {
                     <p>By continuing, i agree to the terms of use & privact policy.</p>
                 </div>
                 {currstate === "Login"
-                    ? <p>Create a new account? <span onClick={()=> setCurrState("Sign Up")}>Click here</span></p>
-                    : <p>Already have an account <span  onClick={()=> setCurrState("Login")}>Login here </span></p>
+                    ? <p >Create a new account? <span  className='sign' onClick={()=> setCurrState("Sign Up")}>Click here</span></p>
+                    : <p>Already have an account <span  className='login' onClick={()=> setCurrState("Login")}>Login here </span></p>
                 }
             </form>
     </div>
