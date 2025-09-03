@@ -81,7 +81,7 @@ function viewmore(){
     }
   }
   function removeCart(itemId){
-   setCartItem((prev) => ({...prev,[itemId] : prev[itemId] -1 }))
+   setCartItem((prev) => ({...prev,[itemId] : prev[itemId] -1 }));
   }
 
   useEffect(() => {
@@ -107,25 +107,26 @@ function viewmore(){
      theme,
      setTheme,
      toggleTheme ,
-   
-    filterItem,
-    setFilterItem,
-    search,
-    setSearch,
-    showSearch,
-    setShowSearch,
-    cartItem,
-    addToCart,
-    getCartCount,
-    removeCart,
-    updateQuantity,
-    getCartTotal,
-    viewmore,
-    visibleCount,
-    setVisibleCount
+     filterItem,
+     setFilterItem,
+     search,
+     setSearch,
+     showSearch,
+     setShowSearch,
+     cartItem,
+     addToCart,
+     getCartCount,
+     removeCart,
+     updateQuantity,
+     getCartTotal,
+     viewmore,
+     visibleCount,
+     setVisibleCount
   };
 
-  return <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>;
+  return <ShopContext.Provider value={value}>
+    {props.children
+    }</ShopContext.Provider>;
 }
 
 export default GlobalState;

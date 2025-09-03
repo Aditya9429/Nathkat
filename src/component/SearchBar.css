@@ -3,15 +3,18 @@
   max-width: 500px;
   margin: 1rem auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 10px;
+  position: relative;
 }
 
 .searchbar-input-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* needed for animated placeholder */
   background-color: #fff;
   border-radius: 8px;
   padding: 8px 12px;
@@ -21,16 +24,33 @@
 
 .searchbar-input {
   width: 100%;
-  min-width: 00px;
   border: none;
   outline: none;
   font-size: 16px;
   padding: 8px;
   border-radius: 6px;
+  color: #333;
+  font-weight: 500;
 }
 
-.searchbar-input::placeholder {
-  color: #aaa;
+.placeholder-animate {
+  position: absolute;
+  left: 25px;
+  color: #4f4647;
+  font-weight: bold;
+  pointer-events: none;
+  animation: slideUpFade 0.9s ease-in-out;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .searchbar-input-container svg {
@@ -46,10 +66,43 @@
   transition: transform 0.2s ease;
 }
 
+.search-suggestions {
+  background: #fff;
+  border: 1px solid #ddd;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-@media (max-width : 600px){
-    .searchbar-container{
-        width: 70%;
-        /* margin-top: 120px; */
-    }
+.search-suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-suggestion-item:hover {
+  background: #f2f2f2;
+}
+
+.suggestion-img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .searchbar-container {
+    width: 70%;
+  }
 }

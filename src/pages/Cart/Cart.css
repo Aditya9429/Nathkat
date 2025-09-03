@@ -1,10 +1,12 @@
 .cart-container {
   max-width: 1200px;
-  margin:  auto;
+  margin: auto;
   padding: 20px;
   /* background-color: #f9f9f9; */
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+
+
 }
 
 
@@ -21,6 +23,25 @@
   gap: 20px;
 }
 
+.cart-empty {
+    display: flex;
+  justify-content: center;  
+  align-items: center;       
+  flex-direction: column;
+  gap:1rem;  
+  height: 60vh;              
+  text-align: center;
+  color: #555;
+}
+
+.btn-continue-Shooping{
+  color: white;
+  font-weight: 600;
+  background-color: rgb(213, 174, 80);
+}
+.btn-continue-Shooping:hover{
+   background-color: rgb(189, 174, 80);
+}
 
 .cart-item-container {
   display: flex;

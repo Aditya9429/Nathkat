@@ -9,6 +9,7 @@ import { CiSun } from "react-icons/ci";
 
 export default function Navbar() {
     const [visible, setVisible] = useState(false);
+ 
     const { darkMode, theme, toggleTheme, setShowSearch, getCartCount } = useContext(ShopContext);
     const navigate = useNavigate();
     const sideBarRef = useRef();
@@ -27,6 +28,7 @@ export default function Navbar() {
     }, [visible]);
 
 
+   
     function handlClick(){
         navigate('/');
     }
@@ -48,7 +50,7 @@ export default function Navbar() {
                 </ul>
 
                 <div className='left-part'>
-                    <Search className='search-icon' onClick={() => setShowSearch(true)} />
+                    <Search className='search-icon' onClick={() => setShowSearch(true)} onChange={(e) => setQuery(e.target.value)} />
 
                     <div className='admin-wrapper'>
                         <User className='profile-icon' onClick={() => navigate('/login')} />

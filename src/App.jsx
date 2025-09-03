@@ -15,6 +15,7 @@ import Footer from './component/Footer'
 import SearchBar from './component/SearchBar'
 import { ShopContext } from './context/ShopContext'
 import Account from './pages/Account/Account'
+import Recovery from './pages/Recovery/Recovery'
 export default function App() {
   const { theme } = useContext(ShopContext);
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/orders' element={<Orders />} />
           <Route path='/account' element={<Account />} />
+           <Route path='/recovery' element={<Recovery />} />
         </Routes>
         <Footer />
       </div>

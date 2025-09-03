@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import './Login.css'
+import { useNavigate } from 'react-router-dom';
 export default function Login() {
-  const [currstate ,setCurrState] = useState("Login")
+  const [currstate ,setCurrState] = useState("Login");
+  const navigate = useNavigate();
+  function  handleClick(){
+    navigate('/recovery');
+  }
   return (
     <div>
        <form className='login-popup-container'>
@@ -16,6 +21,7 @@ export default function Login() {
 
                 </div>
                 <button>{currstate === "Sign Up" ? "Create Account" : "Login"}</button>
+                  <p className='forget' onClick={handleClick}>Forget Your Password ?</p>
                 <div className='login-popup-condition'>
                     <input type="checkbox" required />
                     <p>By continuing, i agree to the terms of use & privact policy.</p>

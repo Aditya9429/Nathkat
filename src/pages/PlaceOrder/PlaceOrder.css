@@ -63,6 +63,18 @@
     background-color: #fafafa;
 }
 
+.btn-save {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: rgb(33, 32, 32);
+    margin-top: 1rem;
+}
+.btn-save:hover{
+    background-color:#333;
+}
 
 .placeorder-right {
     width: 35%;

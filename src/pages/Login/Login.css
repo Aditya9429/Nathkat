@@ -71,17 +71,24 @@ span{
 }
 .login-popup-condition{
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 8px;
     margin-top: -15px;
 }
 .login-popup-condition input{
     margin-top: 5px;
 }
+.login-popup-condition p{
+    font-size: 13px;
+}
 .login-popup p span{
     color: rgb(79, 160, 79);
     font-weight: 500;
     cursor: pointer;
+}
+.forget {
+    cursor: pointer;
+     border-bottom: 1px solid black;
 }
 .login:hover{
    color: green;

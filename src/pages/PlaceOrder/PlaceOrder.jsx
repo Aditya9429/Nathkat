@@ -25,6 +25,7 @@ export default function PlaceOrder() {
           <input type="text" placeholder='State' className='input-3' />
         </div>
         <input type="number" placeholder='Phone number' className='input4'/>
+        <button className='btn-save'>Save</button>
       </div>
       <div className='placeorder-right'>
         <div className='placeorder-cart'>

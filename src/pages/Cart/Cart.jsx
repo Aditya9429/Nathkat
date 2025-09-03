@@ -29,7 +29,16 @@ export default function Cart() {
         <h1>Your Cart</h1>
       </div>
       <div className='cart-items'>
+        
         {
+         
+          cartData.length === 0 ? (
+                 <div className='cart-empty'>
+                  <h1>Cart is empty</h1>
+                  <button onClick={() => navigate('/collection')} className='btn-continue-Shooping'>Continue Shooping</button>
+                 </div>
+                 
+          ) : (
           cartData.map((item, index) => {
             const productData = product.find((product) => product.id == item.id);
             return (
@@ -51,8 +60,11 @@ export default function Cart() {
 
               </div>
             )
+          
           })
+        )
         }
+      
       </div>
       </div>
       <div className='cart-tm'>
